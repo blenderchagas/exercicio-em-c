@@ -1,39 +1,24 @@
 #include <stdio.h>
-
 int main()
 {
-    int M, N;
-
-    printf("Qual a quantidade de linhas da matriz?");
-        scanf("%d", &M);
-    printf("Qual a quantidade de colunas da matriz?");
-        scanf("%d", &N);
-
-    double mat[M][N];
-    double vet[M];
-
-    for (int i = 0; i < M; i++)
-    {
-        printf("Digite os elementos da %da. linha:\n", i + 1);
-        for (int j = 0; j < N; j++)
-        {
-            scanf("%lf", &mat[i][j]);
-        }
-    }
-
-    for (int i = 0; i < M; i++)
-    {
-        vet[i] = 0;
-        for (int j = 0; j < N; i++)
-        {
-            vet[i] = vet[i] + mat[i][j];
-        }
-    }
-    printf("VETOR GERADO:\n");
-    for (int i = 0; i < M; i++)
-    {
-        printf("%.1lf\n", vet[i]);
-    }
-
-    return 0;
-}
+ int M, N, i, j;
+ printf("Quantas linhas vai ter a matriz? ");
+ scanf("%d", &M);
+ printf("Quantas colunas vai ter a matriz? ");
+ scanf("%d", &N);
+ int mat[M][N];
+ for (i = 0; i < M; i++) {
+ for (j = 0; j < N; j++) {
+ printf("Elemento [%d,%d]: ", i, j);
+ scanf("%d", &mat[i][j]);
+ }
+ }
+ printf("\nMATRIZ DIGITADA:\n");
+ for (i = 0; i < M; i++) {
+ for (j = 0; j < N; j++) {
+ printf("%d ", mat[i][j]);
+ }
+ printf("\n");
+ }
+ return 0;
+} 
